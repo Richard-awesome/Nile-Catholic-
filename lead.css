@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap');
+
+*{
+  cursor: crosshair;
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+header{
+  width: 100%;
+  background-color: rgba(230, 230, 230, 0.3);
+  box-shadow: 0 0 5px,
+  0 0 10px
+  ;
+  align-items: center;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header h1{
+  font-family: "Arima", system-ui;
+}
+
+ .menu-bar ul{
+  align-items: center;
+
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+ }
+
+.menu-bar {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  justify-content: space-evenly;
+}
+
+header .menu-bar ul li{
+  font-family: "Agdasima", sans-serif;
+  list-style: none;
+  font-size: 25px;
+}
+
+header .menu-bar ul li a{
+  text-decoration: none;
+  color: #0000008c;
+}
+
+.stacked{
+  opacity: 0.3;
+}
+
+main{
+  padding: 50px;
+  margin-top: 10%;
+}
+
+main .items{
+  padding: 20px;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+main .items article{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.stacked{
+  visibility: hidden;
+}
+
+@media(max-width: 1000px){
+  header{
+    position: fixed;
+    top: 0;
+    left:-40px;
+  }
+
+  .stacked{
+    visibility: visible;
+  }
+
+  article{
+    padding: 10px;
+  }
+
+  .hide{
+    visibility: hidden;
+  }
+
+ main .items{
+    flex-direction: column;
+    row-gap: 100px;
+  }
+}
+
+#purple{
+  color: rgba(128, 0, 128, 0.685);
+}
+
+#blue{
+  color: rgba(0, 255, 0, 0.61);
+}
+
+#light{
+  color: lightblue;
+}
+
+.bi{
+  font-size: 50px;
+  transition: all 0.3s;
+}
+
+.bi:hover{
+  scale: 3;
+}
+
+article{
+  box-shadow: 0 0 5px;
+  padding: 100px;
+}
+main{
+  animation: identifier 1s ease-in-out;
+}
+
+@keyframes identifier {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0.5;
+    transform: translateY(-20px);
+  }
+}
+
+
+
+.Download-it{
+  padding: 10px;
+  border: none;
+  background-color: rgba(230, 230, 230, 0.966);
+
+}
+
+.Download-it:active{
+  background-color: rgba(168, 168, 168, 0.966);
+  transition: all 0.3s ease-in-out;
+}
